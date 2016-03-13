@@ -6,12 +6,12 @@
   </specVersion>
   <device>
     <deviceType>urn:schemas-upnp-org:device:ZonePlayer:1</deviceType>
-    <friendlyName>192.168.1.102 - Sonos PLAY:5</friendlyName>
+    <friendlyName>192.168.1.102 - Sonos PLAY5</friendlyName>
     <manufacturer>Sonos, Inc.</manufacturer>
     <manufacturerURL>http://www.sonos.com</manufacturerURL>
     <modelNumber>S5</modelNumber>
-    <modelDescription>Sonos PLAY:5</modelDescription>
-    <modelName>Sonos PLAY:5</modelName>
+    <modelDescription>Sonos PLAY5</modelDescription>
+    <modelName>Sonos PLAY5</modelName>
     <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
     <softwareVersion>26.1-76230</softwareVersion>
     <hardwareVersion>1.16.4.1-1</hardwareVersion>
@@ -32,7 +32,7 @@
     <displayVersion>5.0</displayVersion>
     <extraVersion>OTP: 1.1.1(1-16-4-zp5s-0.5)</extraVersion>
     <roomName>Kitchen</roomName>
-    <displayName>PLAY:5</displayName>
+    <displayName>PLAY5</displayName>
     <zoneType>5</zoneType>
     <feature1>0x02000002</feature1>
     <feature2>0x00006172</feature2>
@@ -102,12 +102,12 @@
     <deviceList>
       <device>
   <deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType>
-  <friendlyName>192.168.1.102 - Sonos PLAY:5 Media Server</friendlyName>
+  <friendlyName>192.168.1.102 - Sonos PLAY5 Media Server</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
   <modelNumber>S5</modelNumber>
-  <modelDescription>Sonos PLAY:5 Media Server</modelDescription>
-  <modelName>Sonos PLAY:5</modelName>
+  <modelDescription>Sonos PLAY5 Media Server</modelDescription>
+  <modelName>Sonos PLAY5</modelName>
   <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
   <UDN>uuid:RINCON_000E588F198801400_MS</UDN>
   <serviceList>
@@ -129,12 +129,12 @@
       </device>
       <device>
 	<deviceType>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType>
-  <friendlyName>Kitchen - Sonos PLAY:5 Media Renderer</friendlyName>
+  <friendlyName>Kitchen - Sonos PLAY5 Media Renderer</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
   <modelNumber>S5</modelNumber>
-  <modelDescription>Sonos PLAY:5 Media Renderer</modelDescription>
-  <modelName>Sonos PLAY:5</modelName>
+  <modelDescription>Sonos PLAY5 Media Renderer</modelDescription>
+  <modelName>Sonos PLAY5</modelName>
   <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
 	<UDN>uuid:RINCON_000E588F198801400_MR</UDN>
 	<serviceList>
