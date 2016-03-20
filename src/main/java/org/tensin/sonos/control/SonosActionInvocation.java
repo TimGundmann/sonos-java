@@ -1,22 +1,22 @@
 package org.tensin.sonos.control;
 
-import org.teleal.cling.model.action.ActionArgumentValue;
-import org.teleal.cling.model.action.ActionException;
-import org.teleal.cling.model.action.ActionInvocation;
-import org.teleal.cling.model.meta.Action;
-import org.teleal.cling.model.meta.ActionArgument;
-import org.teleal.cling.model.types.BooleanDatatype;
-import org.teleal.cling.model.types.CharacterDatatype;
-import org.teleal.cling.model.types.DoubleDatatype;
-import org.teleal.cling.model.types.FloatDatatype;
-import org.teleal.cling.model.types.IntegerDatatype;
-import org.teleal.cling.model.types.InvalidValueException;
-import org.teleal.cling.model.types.ShortDatatype;
-import org.teleal.cling.model.types.StringDatatype;
-import org.teleal.cling.model.types.URIDatatype;
-import org.teleal.cling.model.types.UnsignedIntegerFourBytesDatatype;
-import org.teleal.cling.model.types.UnsignedIntegerOneByteDatatype;
-import org.teleal.cling.model.types.UnsignedIntegerTwoBytesDatatype;
+import org.fourthline.cling.model.action.ActionArgumentValue;
+import org.fourthline.cling.model.action.ActionException;
+import org.fourthline.cling.model.action.ActionInvocation;
+import org.fourthline.cling.model.meta.Action;
+import org.fourthline.cling.model.meta.ActionArgument;
+import org.fourthline.cling.model.types.BooleanDatatype;
+import org.fourthline.cling.model.types.CharacterDatatype;
+import org.fourthline.cling.model.types.DoubleDatatype;
+import org.fourthline.cling.model.types.FloatDatatype;
+import org.fourthline.cling.model.types.IntegerDatatype;
+import org.fourthline.cling.model.types.InvalidValueException;
+import org.fourthline.cling.model.types.ShortDatatype;
+import org.fourthline.cling.model.types.StringDatatype;
+import org.fourthline.cling.model.types.URIDatatype;
+import org.fourthline.cling.model.types.UnsignedIntegerFourBytesDatatype;
+import org.fourthline.cling.model.types.UnsignedIntegerOneByteDatatype;
+import org.fourthline.cling.model.types.UnsignedIntegerTwoBytesDatatype;
 
 /**
  * The Class SonosActionInvocation.
@@ -106,7 +106,7 @@ public class SonosActionInvocation extends ActionInvocation {
     /**
      * {@inheritDoc}
      * 
-     * @see org.teleal.cling.model.action.ActionInvocation#setInput(java.lang.String, java.lang.Object)
+     * @see org.fourthline.cling.model.action.ActionInvocation#setInput(java.lang.String, java.lang.Object)
      */
     public void setInput(final String argumentName, final String value) throws InvalidValueException {
         // super.setInput(argumentName, value);

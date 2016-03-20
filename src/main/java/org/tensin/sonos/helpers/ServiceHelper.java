@@ -1,9 +1,9 @@
 package org.tensin.sonos.helpers;
 
-import org.teleal.cling.model.action.ActionArgumentValue;
-import org.teleal.cling.model.action.ActionInvocation;
-import org.teleal.cling.model.types.UnsignedIntegerFourBytes;
-import org.teleal.cling.model.types.UnsignedIntegerTwoBytes;
+import org.fourthline.cling.model.action.ActionArgumentValue;
+import org.fourthline.cling.model.action.ActionInvocation;
+import org.fourthline.cling.model.types.UnsignedIntegerFourBytes;
+import org.fourthline.cling.model.types.UnsignedIntegerTwoBytes;
 
 /**
  */

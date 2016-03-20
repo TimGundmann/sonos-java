@@ -1,15 +1,15 @@
 package org.tensin.sonos.gen;
 
-import org.teleal.cling.model.meta.Service;
-import org.teleal.cling.model.meta.Action;
-import org.teleal.cling.model.action.ActionInvocation;
-import org.teleal.cling.controlpoint.ActionCallback;
-import org.teleal.cling.UpnpService;
-import org.teleal.cling.model.meta.RemoteDevice;
+import org.fourthline.cling.model.meta.Service;
+import org.fourthline.cling.model.meta.Action;
+import org.fourthline.cling.model.action.ActionInvocation;
+import org.fourthline.cling.controlpoint.ActionCallback;
+import org.fourthline.cling.UpnpService;
+import org.fourthline.cling.model.meta.RemoteDevice;
 import org.tensin.sonos.helpers.RemoteDeviceHelper;
 import org.tensin.sonos.helpers.ServiceHelper;
-import org.teleal.cling.model.types.UnsignedIntegerFourBytes;
-import org.teleal.cling.model.types.UnsignedIntegerTwoBytes;
+import org.fourthline.cling.model.types.UnsignedIntegerFourBytes;
+import org.fourthline.cling.model.types.UnsignedIntegerTwoBytes;
 import org.tensin.sonos.SonosException;
 
 

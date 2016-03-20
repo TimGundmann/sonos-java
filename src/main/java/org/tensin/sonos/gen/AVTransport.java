@@ -1,15 +1,15 @@
 package org.tensin.sonos.gen;
 
-import org.teleal.cling.model.meta.Service;
-import org.teleal.cling.model.meta.Action;
-import org.teleal.cling.model.action.ActionInvocation;
-import org.teleal.cling.controlpoint.ActionCallback;
-import org.teleal.cling.UpnpService;
-import org.teleal.cling.model.meta.RemoteDevice;
+import org.fourthline.cling.model.meta.Service;
+import org.fourthline.cling.model.meta.Action;
+import org.fourthline.cling.model.action.ActionInvocation;
+import org.fourthline.cling.controlpoint.ActionCallback;
+import org.fourthline.cling.UpnpService;
+import org.fourthline.cling.model.meta.RemoteDevice;
 import org.tensin.sonos.helpers.RemoteDeviceHelper;
 import org.tensin.sonos.helpers.ServiceHelper;
-import org.teleal.cling.model.types.UnsignedIntegerFourBytes;
-import org.teleal.cling.model.types.UnsignedIntegerTwoBytes;
+import org.fourthline.cling.model.types.UnsignedIntegerFourBytes;
+import org.fourthline.cling.model.types.UnsignedIntegerTwoBytes;
 import org.tensin.sonos.SonosException;
 
 
@@ -29,8 +29,6 @@ public class AVTransport {
     public enum RecordStorageMedium {NONE}
 
     public enum CurrentPlayMode {NORMAL, REPEAT_ALL, SHUFFLE_NOREPEAT, SHUFFLE}
-
-    public enum TransportPlaySpeed {_1}
 
     public enum SeekMode {TRACK_NR, REL_TIME, SECTION}
 
@@ -999,7 +997,7 @@ public class AVTransport {
 
             response.currentTransportStatus = ServiceHelper._string(invocation, "CurrentTransportStatus");
 
-            response.currentSpeed = ServiceHelper._string(invocation, "CurrentSpeed", TransportPlaySpeed.class);
+            response.currentSpeed = ServiceHelper._string(invocation, "CurrentSpeed");
 
             return response;
 
@@ -1169,7 +1167,7 @@ public class AVTransport {
         
         private int instanceID;
 
-        private TransportPlaySpeed speed;
+        private String speed;
 
         
         public PlayRequest instanceID(int instanceID) {
@@ -1177,7 +1175,7 @@ public class AVTransport {
             return this;
         }
 
-        public PlayRequest speed(TransportPlaySpeed speed) {
+        public PlayRequest speed(String speed) {
             this.speed = speed;
             return this;
         }
@@ -1188,7 +1186,7 @@ public class AVTransport {
             
             invocation.setInput("InstanceID", new UnsignedIntegerFourBytes(this.instanceID));
 
-            invocation.setInput("Speed", (this.speed).toString().substring(1));
+            invocation.setInput("Speed", this.speed);
 
             new ActionCallback.Default(invocation, upnpService.getControlPoint()).run();
             if (invocation.getFailure() != null)
@@ -2406,7 +2404,7 @@ public class AVTransport {
 
         private String currentTransportStatus;
 
-        private TransportPlaySpeed currentSpeed;
+        private String currentSpeed;
 
         
         public TransportState currentTransportState() {
@@ -2417,7 +2415,7 @@ public class AVTransport {
             return currentTransportStatus;
         }
 
-        public TransportPlaySpeed currentSpeed() {
+        public String currentSpeed() {
             return currentSpeed;
         }
 

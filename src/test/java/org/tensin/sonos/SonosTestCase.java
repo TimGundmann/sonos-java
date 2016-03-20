@@ -3,6 +3,7 @@ package org.tensin.sonos;
 import com.google.common.base.Strings;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,11 +17,12 @@ import java.util.List;
 /**
  * The Class CLITestCase.
  */
+@Ignore
 public class SonosTestCase {
     private static final Logger log = LoggerFactory.getLogger(SonosTestCase.class);
 
-    public static final String ZONE1 = "Living Room";
-    public static final String ZONE2 = "Kitchen";
+    public String zone1 = "Living Room";
+    public String zone2 = "Kitchen";
 
     private Sonos sonos;
 
@@ -54,10 +56,11 @@ public class SonosTestCase {
      */
     @Test
     public void testList() {
+    	zone1 = sonos.getZoneNames().get(0);
         String[] types = {"A:", "S:", /*"Q",*/ "Q:0", "SQ:", /*"R:",*/ "EN:"};//, "S://server_smb/Sara", "A:PLAYLISTS", "A:TRACKS"};
         for (String type : types) {
             log.info("Browsing " + type);
-            Iterable<Entry> entries = sonos.browse(sonos.getPlayer(ZONE1), type);
+            Iterable<Entry> entries = sonos.browse(sonos.getPlayer(zone1), type);
             dumpEntries(entries);
         }
     }
@@ -94,7 +97,7 @@ public class SonosTestCase {
 
     @Test
     public void testPlay()  {
-        ZonePlayer player = sonos.getPlayer(ZONE1);
+        ZonePlayer player = sonos.getPlayer(zone1);
         dumpEntries(sonos.browse(player, "Q:0"));
         sonos.clearQueue(player);
         sonos.enqueue(player, "cifs://server_smb/sonos/Classical/Bach, Johann Sebastian/Goldberg Variations/Glenn Gould - Bach  The Goldberg Variations (1955)/02 Variation 1 a 1 Clav..flac");
@@ -104,7 +107,7 @@ public class SonosTestCase {
 
     @Test
     public void testVolume() {
-        ZonePlayer player = sonos.getPlayer(ZONE1);
+        ZonePlayer player = sonos.getPlayer(zone1);
         sonos.setVolume(player, 20);
         //log.info("" + sonos.volume(player));
         assert sonos.volume(player) == 20;
@@ -118,7 +121,7 @@ public class SonosTestCase {
 
     @Test
     public void testDeviceDump() {
-        log.info(RemoteDeviceHelper.dumpRemoteDevice(sonos.getPlayer(ZONE1).getRootDevice()));
+        log.info(RemoteDeviceHelper.dumpRemoteDevice(sonos.getPlayer(zone1).getRootDevice()));
     }
 
 //    /**

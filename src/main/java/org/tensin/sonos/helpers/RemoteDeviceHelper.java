@@ -1,12 +1,12 @@
 package org.tensin.sonos.helpers;
 
 import com.google.common.base.Joiner;
-import org.teleal.cling.model.meta.Action;
-import org.teleal.cling.model.meta.ActionArgument;
-import org.teleal.cling.model.meta.RemoteDevice;
-import org.teleal.cling.model.meta.Service;
-import org.teleal.cling.model.types.Datatype;
-import org.teleal.cling.model.types.UDAServiceId;
+import org.fourthline.cling.model.meta.Action;
+import org.fourthline.cling.model.meta.ActionArgument;
+import org.fourthline.cling.model.meta.RemoteDevice;
+import org.fourthline.cling.model.meta.Service;
+import org.fourthline.cling.model.types.Datatype;
+import org.fourthline.cling.model.types.UDAServiceId;
 
 /**
  * The Class RemoteDeviceHelper.

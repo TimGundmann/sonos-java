@@ -6,17 +6,17 @@
   </specVersion>
   <device>
     <deviceType>urn:schemas-upnp-org:device:ZonePlayer:1</deviceType>
-    <friendlyName>192.168.1.121 - Sonos CONNECT</friendlyName>
+    <friendlyName>192.168.0.102 - Sonos CONNECT</friendlyName>
     <manufacturer>Sonos, Inc.</manufacturer>
     <manufacturerURL>http://www.sonos.com</manufacturerURL>
     <modelNumber>ZP90</modelNumber>
     <modelDescription>Sonos CONNECT</modelDescription>
     <modelName>Sonos CONNECT</modelName>
     <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
-    <softwareVersion>26.1-76230</softwareVersion>
-    <hardwareVersion>1.16.5.5-1</hardwareVersion>
-    <serialNum>00-0E-58-A3-B8-4A:G</serialNum>
-    <UDN>uuid:RINCON_000E58A3B84A01400</UDN>
+    <softwareVersion>31.3-22220</softwareVersion>
+    <hardwareVersion>1.16.5.5-2</hardwareVersion>
+    <serialNum>00-0E-58-A9-CE-44:4</serialNum>
+    <UDN>uuid:RINCON_000E58A9CE4401400</UDN>
     <iconList>
       <icon>
         <id>0</id>
@@ -27,11 +27,11 @@
         <url>/img/icon-ZP90.png</url>
       </icon>
     </iconList>
-    <minCompatibleVersion>24.0-00000</minCompatibleVersion>
-    <legacyCompatibleVersion>24.0-0000</legacyCompatibleVersion>
-    <displayVersion>5.0</displayVersion>
+    <minCompatibleVersion>29.0-00000</minCompatibleVersion>
+    <legacyCompatibleVersion>24.0-00000</legacyCompatibleVersion>
+    <displayVersion>6.0</displayVersion>
     <extraVersion>OTP: 1.1.1(1-16-5-zp90-0.8)</extraVersion>
-    <roomName>Living Room</roomName>
+    <roomName>Stue</roomName>
     <displayName>CONNECT</displayName>
     <zoneType>1</zoneType>
     <feature1>0x00310001</feature1>
@@ -40,6 +40,8 @@
     <internalSpeakerSize>-1</internalSpeakerSize>
     <bassExtension>0.000</bassExtension>
     <satGainOffset>0.000</satGainOffset>
+    <memory>32</memory>
+    <flash>32</flash>
     <ampOnTime>425</ampOnTime>
     <serviceList>
       <service>
@@ -102,14 +104,14 @@
     <deviceList>
       <device>
   <deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType>
-  <friendlyName>192.168.1.121 - Sonos CONNECT Media Server</friendlyName>
+  <friendlyName>192.168.0.102 - Sonos CONNECT Media Server</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
   <modelNumber>ZP90</modelNumber>
   <modelDescription>Sonos CONNECT Media Server</modelDescription>
   <modelName>Sonos CONNECT</modelName>
   <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
-  <UDN>uuid:RINCON_000E58A3B84A01400_MS</UDN>
+  <UDN>uuid:RINCON_000E58A9CE4401400_MS</UDN>
   <serviceList>
     <service>
       <serviceType>urn:schemas-upnp-org:service:ContentDirectory:1</serviceType>
@@ -129,14 +131,14 @@
       </device>
       <device>
 	<deviceType>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType>
-  <friendlyName>Living Room - Sonos CONNECT Media Renderer</friendlyName>
+  <friendlyName>Stue - Sonos CONNECT Media Renderer</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
   <modelNumber>ZP90</modelNumber>
   <modelDescription>Sonos CONNECT Media Renderer</modelDescription>
   <modelName>Sonos CONNECT</modelName>
   <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
-	<UDN>uuid:RINCON_000E58A3B84A01400_MR</UDN>
+	<UDN>uuid:RINCON_000E58A9CE4401400_MR</UDN>
 	<serviceList>
 	  <service>
 	    <serviceType>urn:schemas-upnp-org:service:RenderingControl:1</serviceType>
@@ -175,7 +177,7 @@
           </service>
 	</serviceList>
         <X_Rhapsody-Extension xmlns="http://www.real.com/rhapsody/xmlns/upnp-1-0">
-          <deviceID>urn:rhapsody-real-com:device-id-1-0:sonos_1:RINCON_000E58A3B84A01400</deviceID>
+          <deviceID>urn:rhapsody-real-com:device-id-1-0:sonos_1:RINCON_000E58A9CE4401400</deviceID>
             <deviceCapabilities>
               <interactionPattern type="real-rhapsody-upnp-1-0"/>
             </deviceCapabilities>

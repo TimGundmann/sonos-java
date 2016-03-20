@@ -12,8 +12,8 @@
  */
 package org.tensin.sonos.control;
 
-import org.teleal.cling.UpnpService;
-import org.teleal.cling.model.meta.RemoteDevice;
+import org.fourthline.cling.UpnpService;
+import org.fourthline.cling.model.meta.RemoteDevice;
 
 import java.net.InetAddress;
 import java.net.MalformedURLException;
@@ -164,4 +164,10 @@ public class ZonePlayer {
     public int hashCode() {
         return getRootDevice().getIdentity().getUdn().getIdentifierString().hashCode();
     }
+
+	@Override
+	public String toString() {
+		return "ZonePlayer [dev=" + dev + ", ip=" + ip + ", port=" + port + "]";
+	}
+    
 }

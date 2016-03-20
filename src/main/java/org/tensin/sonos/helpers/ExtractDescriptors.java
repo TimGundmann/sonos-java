@@ -3,8 +3,8 @@ package org.tensin.sonos.helpers;
 import com.google.common.base.Charsets;
 import com.google.common.io.Files;
 import com.google.common.io.Resources;
-import org.teleal.cling.model.meta.RemoteDevice;
-import org.teleal.cling.model.meta.RemoteService;
+import org.fourthline.cling.model.meta.RemoteDevice;
+import org.fourthline.cling.model.meta.RemoteService;
 import org.tensin.sonos.commander.Sonos;
 
 import java.io.File;

@@ -6,17 +6,17 @@
   </specVersion>
   <device>
     <deviceType>urn:schemas-upnp-org:device:ZonePlayer:1</deviceType>
-    <friendlyName>192.168.1.102 - Sonos PLAY5</friendlyName>
+    <friendlyName>192.168.0.102 - Sonos CONNECT</friendlyName>
     <manufacturer>Sonos, Inc.</manufacturer>
     <manufacturerURL>http://www.sonos.com</manufacturerURL>
-    <modelNumber>S5</modelNumber>
-    <modelDescription>Sonos PLAY5</modelDescription>
-    <modelName>Sonos PLAY5</modelName>
-    <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
-    <softwareVersion>26.1-76230</softwareVersion>
-    <hardwareVersion>1.16.4.1-1</hardwareVersion>
-    <serialNum>00-0E-58-8F-19-88:1</serialNum>
-    <UDN>uuid:RINCON_000E588F198801400</UDN>
+    <modelNumber>ZP90</modelNumber>
+    <modelDescription>Sonos CONNECT</modelDescription>
+    <modelName>Sonos CONNECT</modelName>
+    <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
+    <softwareVersion>31.3-22220</softwareVersion>
+    <hardwareVersion>1.16.5.5-2</hardwareVersion>
+    <serialNum>00-0E-58-A9-CE-44:4</serialNum>
+    <UDN>uuid:RINCON_000E58A9CE4401400</UDN>
     <iconList>
       <icon>
         <id>0</id>
@@ -24,22 +24,24 @@
         <width>48</width>
         <height>48</height>
         <depth>24</depth>
-        <url>/img/icon-S5.png</url>
+        <url>/img/icon-ZP90.png</url>
       </icon>
     </iconList>
-    <minCompatibleVersion>24.0-00000</minCompatibleVersion>
-    <legacyCompatibleVersion>24.0-0000</legacyCompatibleVersion>
-    <displayVersion>5.0</displayVersion>
-    <extraVersion>OTP: 1.1.1(1-16-4-zp5s-0.5)</extraVersion>
-    <roomName>Kitchen</roomName>
-    <displayName>PLAY5</displayName>
-    <zoneType>5</zoneType>
-    <feature1>0x02000002</feature1>
+    <minCompatibleVersion>29.0-00000</minCompatibleVersion>
+    <legacyCompatibleVersion>24.0-00000</legacyCompatibleVersion>
+    <displayVersion>6.0</displayVersion>
+    <extraVersion>OTP: 1.1.1(1-16-5-zp90-0.8)</extraVersion>
+    <roomName>Stue</roomName>
+    <displayName>CONNECT</displayName>
+    <zoneType>1</zoneType>
+    <feature1>0x00310001</feature1>
     <feature2>0x00006172</feature2>
-    <feature3>0x0003002a</feature3>
-    <internalSpeakerSize>3</internalSpeakerSize>
+    <feature3>0x00030021</feature3>
+    <internalSpeakerSize>-1</internalSpeakerSize>
     <bassExtension>0.000</bassExtension>
     <satGainOffset>0.000</satGainOffset>
+    <memory>32</memory>
+    <flash>32</flash>
     <ampOnTime>425</ampOnTime>
     <serviceList>
       <service>
@@ -102,14 +104,14 @@
     <deviceList>
       <device>
   <deviceType>urn:schemas-upnp-org:device:MediaServer:1</deviceType>
-  <friendlyName>192.168.1.102 - Sonos PLAY5 Media Server</friendlyName>
+  <friendlyName>192.168.0.102 - Sonos CONNECT Media Server</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
-  <modelNumber>S5</modelNumber>
-  <modelDescription>Sonos PLAY5 Media Server</modelDescription>
-  <modelName>Sonos PLAY5</modelName>
-  <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
-  <UDN>uuid:RINCON_000E588F198801400_MS</UDN>
+  <modelNumber>ZP90</modelNumber>
+  <modelDescription>Sonos CONNECT Media Server</modelDescription>
+  <modelName>Sonos CONNECT</modelName>
+  <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
+  <UDN>uuid:RINCON_000E58A9CE4401400_MS</UDN>
   <serviceList>
     <service>
       <serviceType>urn:schemas-upnp-org:service:ContentDirectory:1</serviceType>
@@ -129,14 +131,14 @@
       </device>
       <device>
 	<deviceType>urn:schemas-upnp-org:device:MediaRenderer:1</deviceType>
-  <friendlyName>Kitchen - Sonos PLAY5 Media Renderer</friendlyName>
+  <friendlyName>Stue - Sonos CONNECT Media Renderer</friendlyName>
   <manufacturer>Sonos, Inc.</manufacturer>
   <manufacturerURL>http://www.sonos.com</manufacturerURL>
-  <modelNumber>S5</modelNumber>
-  <modelDescription>Sonos PLAY5 Media Renderer</modelDescription>
-  <modelName>Sonos PLAY5</modelName>
-  <modelURL>http://www.sonos.com/products/zoneplayers/S5</modelURL>
-	<UDN>uuid:RINCON_000E588F198801400_MR</UDN>
+  <modelNumber>ZP90</modelNumber>
+  <modelDescription>Sonos CONNECT Media Renderer</modelDescription>
+  <modelName>Sonos CONNECT</modelName>
+  <modelURL>http://www.sonos.com/products/zoneplayers/ZP90</modelURL>
+	<UDN>uuid:RINCON_000E58A9CE4401400_MR</UDN>
 	<serviceList>
 	  <service>
 	    <serviceType>urn:schemas-upnp-org:service:RenderingControl:1</serviceType>
@@ -175,7 +177,7 @@
           </service>
 	</serviceList>
         <X_Rhapsody-Extension xmlns="http://www.real.com/rhapsody/xmlns/upnp-1-0">
-          <deviceID>urn:rhapsody-real-com:device-id-1-0:sonos_1:RINCON_000E588F198801400</deviceID>
+          <deviceID>urn:rhapsody-real-com:device-id-1-0:sonos_1:RINCON_000E58A9CE4401400</deviceID>
             <deviceCapabilities>
               <interactionPattern type="real-rhapsody-upnp-1-0"/>
             </deviceCapabilities>
@@ -187,7 +189,7 @@
             <width>48</width>
             <height>48</height>
             <depth>24</depth>
-            <url>/img/icon-S5.png</url>
+            <url>/img/icon-ZP90.png</url>
           </icon>
         </iconList>
       </device>
