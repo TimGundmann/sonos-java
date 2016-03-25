@@ -241,7 +241,7 @@ public class Sonos implements Closeable {
 		getAvTransport(player).setCrossfadeMode().crossfadeMode(crossfade).execute();
 	}
 
-	private synchronized String getZoneName(ZonePlayer player) {
+	public String getZoneName(ZonePlayer player) {
 		return getDeviceProperties(player).getZoneAttributes().execute().currentZoneName();
 	}
 
