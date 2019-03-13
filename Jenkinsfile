@@ -16,8 +16,8 @@ node {
 	
 	    rtGradle = Artifactory.newGradleBuild()
 	    rtGradle.tool = 'Gradle-2.4'
-	    rtGradle.deployer releaseRepo: 'libs-release-local', snapshotRepo: 'libs-snapshot-local', server: server
-	    rtGradle.resolver releaseRepo: 'libs-release', snapshotRepo: 'libs-snapshot', server: server
+	    rtGradle.deployer repo: 'libs-release-local', server: server
+	    rtGradle.resolver repo: 'libs-release', server: server
 	
 	    
    }
