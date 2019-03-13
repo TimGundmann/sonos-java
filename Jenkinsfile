@@ -13,7 +13,7 @@ node {
 	    server = Artifactory.server 'gundmannArtifactory'
 	
 	    rtGradle = Artifactory.newGradleBuild()
-	    rtGradle.tool = 'gradle 3.3'
+	    rtGradle.tool = 'gradle 5.2.1'
 	    rtGradle.deployer repo: 'libs-release-local', server: server
 	    rtGradle.resolver repo: 'libs-release', server: server
 	
