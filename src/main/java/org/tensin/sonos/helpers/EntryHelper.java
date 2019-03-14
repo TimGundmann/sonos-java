@@ -12,9 +12,9 @@
  */
 package org.tensin.sonos.helpers;
 
-import org.tensin.sonos.model.Entry;
-
 import java.text.MessageFormat;
+
+import org.tensin.sonos.model.Entry;
 
 /**
  * The Class EntryHelper.

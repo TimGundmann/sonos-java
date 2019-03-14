@@ -1,12 +1,13 @@
 package org.tensin.sonos.helpers;
 
-import com.google.common.base.Joiner;
 import org.fourthline.cling.model.meta.Action;
 import org.fourthline.cling.model.meta.ActionArgument;
 import org.fourthline.cling.model.meta.RemoteDevice;
 import org.fourthline.cling.model.meta.Service;
 import org.fourthline.cling.model.types.Datatype;
 import org.fourthline.cling.model.types.UDAServiceId;
+
+import com.google.common.base.Joiner;
 
 /**
  * The Class RemoteDeviceHelper.

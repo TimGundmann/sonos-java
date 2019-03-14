@@ -6,7 +6,7 @@ apply plugin: 'maven'
 
 archivesBaseName = "sonos-api"
 group = 'org.rattigan.sonos'
-version = '1.3'
+version = '1.4'
 
 buildscript {
     repositories {

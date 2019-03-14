@@ -1,12 +1,13 @@
 package org.tensin.sonos.commander;
 
-import com.google.common.collect.Lists;
+import java.util.Collection;
+import java.util.List;
+
 import org.tensin.sonos.control.BrowseHandle;
 import org.tensin.sonos.control.EntryCallback;
 import org.tensin.sonos.model.Entry;
 
-import java.util.Collection;
-import java.util.List;
+import com.google.common.collect.Lists;
 
 /**
  */

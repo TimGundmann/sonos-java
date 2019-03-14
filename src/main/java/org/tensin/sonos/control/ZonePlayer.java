@@ -12,13 +12,13 @@
  */
 package org.tensin.sonos.control;
 
-import org.fourthline.cling.UpnpService;
-import org.fourthline.cling.model.meta.RemoteDevice;
-
 import java.net.InetAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.UnknownHostException;
+
+import org.fourthline.cling.UpnpService;
+import org.fourthline.cling.model.meta.RemoteDevice;
 
 /**
  * Corresponds to a physical Zone Player, and gives access all the devices and

@@ -18,7 +18,6 @@ package org.tensin.sonos.xml;
 import java.util.ArrayList;
 import java.util.List;
 
-
 import org.tensin.sonos.model.ZoneGroup;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;

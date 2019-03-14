@@ -1,8 +1,10 @@
 package org.tensin.sonos.commander;
 
-import com.google.common.collect.Lists;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.io.Closeable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import org.fourthline.cling.UpnpService;
 import org.fourthline.cling.UpnpServiceImpl;
 import org.fourthline.cling.model.message.header.UDAServiceTypeHeader;
@@ -11,23 +13,36 @@ import org.fourthline.cling.model.types.UDAServiceType;
 import org.fourthline.cling.registry.DefaultRegistryListener;
 import org.fourthline.cling.registry.Registry;
 import org.fourthline.cling.registry.RegistryListener;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.tensin.sonos.SonosConstants;
 import org.tensin.sonos.SonosException;
 import org.tensin.sonos.control.ZonePlayer;
-import org.tensin.sonos.gen.*;
+import org.tensin.sonos.gen.AVTransport;
 import org.tensin.sonos.gen.AVTransport.GetPositionInfoResponse;
 import org.tensin.sonos.gen.AVTransport.TransportState;
+import org.tensin.sonos.gen.AlarmClock;
+import org.tensin.sonos.gen.AudioIn;
+import org.tensin.sonos.gen.ConnectionManager;
+import org.tensin.sonos.gen.ContentDirectory;
+import org.tensin.sonos.gen.DeviceProperties;
+import org.tensin.sonos.gen.GroupManagement;
+import org.tensin.sonos.gen.GroupRenderingControl;
+import org.tensin.sonos.gen.MusicServices;
+import org.tensin.sonos.gen.QPlay;
+import org.tensin.sonos.gen.Queue;
+import org.tensin.sonos.gen.RenderingControl;
+import org.tensin.sonos.gen.SystemProperties;
+import org.tensin.sonos.gen.ZoneGroupTopology;
 import org.tensin.sonos.helpers.EntryHelper;
 import org.tensin.sonos.helpers.RemoteDeviceHelper;
 import org.tensin.sonos.helpers.TimeUtilities;
-import org.tensin.sonos.model.*;
+import org.tensin.sonos.model.Entry;
+import org.tensin.sonos.model.ZoneGroup;
+import org.tensin.sonos.model.ZoneGroupState;
 import org.tensin.sonos.xml.ResultParser;
-import org.tensin.sonos.xml.ZoneGroupStateHandler;
 
-import java.io.Closeable;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import com.google.common.collect.Lists;
 
 /**
  */
@@ -224,9 +239,11 @@ public class Sonos implements Closeable {
 				.enqueuedURIMetaData(EntryHelper.compileMetadataString(entry)).enqueueAsNext(true).execute();
 	}
 
-	public Iterable<Entry> browse(final ZonePlayer player, String type) {
+	public Iterable<Entry> browse(final ZonePlayer player, String type, String filter) {
 		// TODO paging support
-		ContentDirectory.BrowseResponse response = getContentDirectory(player).browse().objectID(type).filter("*")// "dc:title,res,dc:creator,upnp:artist,upnp:album")
+		ContentDirectory.BrowseResponse response = getContentDirectory(player).browse()
+				.objectID(type)
+				.filter(filter)// "dc:title,res,dc:creator,upnp:artist,upnp:album")
 				.browseFlag(ContentDirectory.BrowseFlag.BrowseDirectChildren).requestedCount(Integer.MAX_VALUE)
 				.execute();
 		String xml = response.result();
@@ -234,7 +251,7 @@ public class Sonos implements Closeable {
 	}
 
 	public Iterable<Entry> browseArtists(final ZonePlayer player) {
-		return browse(player, "A:ARTIST");
+		return browse(player, "A:ARTIST", "*");
 	}
 
 	public void crossFade(ZonePlayer player, boolean crossfade) {

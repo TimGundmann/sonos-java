@@ -12,8 +12,6 @@
  */
 package org.tensin.sonos.control;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.fourthline.cling.UpnpService;
 import org.fourthline.cling.controlpoint.ActionCallback;
 import org.fourthline.cling.model.action.ActionArgumentValue;
@@ -22,6 +20,8 @@ import org.fourthline.cling.model.message.UpnpResponse;
 import org.fourthline.cling.model.meta.RemoteDevice;
 import org.fourthline.cling.model.meta.Service;
 import org.fourthline.cling.model.types.UDAServiceId;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * An abstract class that wraps a UpnpService. Intended to be subclassed to have

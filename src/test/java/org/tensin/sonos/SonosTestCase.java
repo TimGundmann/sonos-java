@@ -60,7 +60,7 @@ public class SonosTestCase {
         String[] types = {"A:", "S:", /*"Q",*/ "Q:0", "SQ:", /*"R:",*/ "EN:"};//, "S://server_smb/Sara", "A:PLAYLISTS", "A:TRACKS"};
         for (String type : types) {
             log.info("Browsing " + type);
-            Iterable<Entry> entries = sonos.browse(sonos.getPlayer(zone1), type);
+            Iterable<Entry> entries = sonos.browse(sonos.getPlayer(zone1), type, "*");
             dumpEntries(entries);
         }
     }
@@ -98,10 +98,10 @@ public class SonosTestCase {
     @Test
     public void testPlay()  {
         ZonePlayer player = sonos.getPlayer(zone1);
-        dumpEntries(sonos.browse(player, "Q:0"));
+        dumpEntries(sonos.browse(player, "Q:0", "*"));
         sonos.clearQueue(player);
         sonos.enqueue(player, "cifs://server_smb/sonos/Classical/Bach, Johann Sebastian/Goldberg Variations/Glenn Gould - Bach  The Goldberg Variations (1955)/02 Variation 1 a 1 Clav..flac");
-        dumpEntries(sonos.browse(player, "Q:0"));
+        dumpEntries(sonos.browse(player, "Q:0", "*"));
         sonos.play(player);
     }
 
