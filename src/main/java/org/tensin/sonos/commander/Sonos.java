@@ -238,6 +238,10 @@ public class Sonos implements Closeable {
 		return getAvTransport(getCoordinator(player)).addURIToQueue().enqueuedURI(entry.getRes())
 				.enqueuedURIMetaData(EntryHelper.compileMetadataString(entry)).enqueueAsNext(true).execute();
 	}
+	
+	public String getSearchCapabilities(ZonePlayer player) {
+		return getContentDirectory(player).getSearchCapabilities().execute().searchCaps();
+	}
 
 	public Iterable<Entry> browse(final ZonePlayer player, String type, String filter) {
 		// TODO paging support
